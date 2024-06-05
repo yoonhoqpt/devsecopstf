@@ -1,0 +1,11 @@
+apiVersion: skaffold/v2beta16
+kind: Config
+metadata:
+  name: sample-app
+build:
+  artifacts:
+    - image: gcr.io/learnproject-425520/sample-app
+deploy:
+  kubectl:
+    manifests:
+      - k8s-*
